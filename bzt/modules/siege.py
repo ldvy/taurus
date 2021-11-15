@@ -42,7 +42,7 @@ class SiegeExecutor(ScenarioExecutor):
         super(SiegeExecutor, self).prepare()
         self.scenario = self.get_scenario()
         self.install_required_tools()
-
+        self.log.warning('_d_: debug!')
         self.__rc_name = self.execution.get("rc-file")
         if not self.__rc_name:
             config_params = ('verbose = true',
