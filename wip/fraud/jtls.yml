@@ -1,0 +1,11 @@
+execution:
+  - scenario: inject_scenario_2
+    executor: external-results-loader
+    #files:
+    #  - kpi_2_assertions_2.jtl
+    #  - assertions_errors_2.jtl
+scenarios:
+  inject_scenario_2:
+    data-file: kpi_2_assertions_2.jtl
+    errors-file: assertions_errors_2.jtl
+    script: kpi_2_assertions_2.jtl

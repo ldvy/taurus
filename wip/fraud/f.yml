@@ -1,0 +1,22 @@
+execution:
+  - executor: siege
+    concurrency: 5
+    iterations: 10
+    scenario: sc1
+    files:
+      - ../../bzt/modules/siege.py
+
+scenarios:
+  sc1:
+    requests:
+      - https://blazedemo.com
+services:
+  - module: shellexec
+    run-at: local
+    prepare:
+      - command: cp /tmp/artifacts/siege.py /usr/local/taurus-cloud/python/lib/python3.8/site-packages/bzt/modules
+
+#modules:
+#  cloud:
+#    account: Enterprise
+#    workspace: Olga's workspace
